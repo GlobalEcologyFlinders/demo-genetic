@@ -2,12 +2,12 @@
 <img align="right" src="www/GRiconTransp.png" alt="genetic rescue icon" width="180" style="margin-top: 20px">
 Code for <em>SLiM</em> 4.0 demo-genetic models examining the population effects of genetic rescue
 
-<a href=mailto:julian.beaman@flinders.edu.au>Julian Beaman</a> & <a href=mailto:corey.bradshaw@flinders.edu.au>Corey Bradshaw</a>
-Flinders University
-07.04.2024
-
-Accompanies paper:
-
+<a href=mailto:julian.beaman@flinders.edu.au>Julian Beaman</a> & <a href=mailto:corey.bradshaw@flinders.edu.au>Corey Bradshaw</a> <br>
+Flinders University <br>
+07.04.2024 <br>
+<br>
+Accompanies paper:<br>
+<br>
 Beaman, JE, K Gates, F Saltré, CJ Hogg, K Belov, K Ashman, K Burke da Silva, LB Beheregaray, CJA Bradshaw. A guide for developing demo-genetic models to simulate genetic rescue. <em>Evolutionary Applications</em> In review
 
 ## Scripts
