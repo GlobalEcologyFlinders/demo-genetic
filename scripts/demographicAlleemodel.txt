@@ -1,0 +1,161 @@
+// set up a simple neutral non-Wright-Fisher simulation
+
+initialize() {
+	initializeSLiMModelType("nonWF");
+	defineConstant("Kp1", 2000);
+	defineConstant("Kp2", 500);	
+	defineConstant("N", 2); // number of subpopulations
+	defineConstant("L",c(1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0)); // life table, survival probability		
+	defineConstant("Tdelta", 10001);
+	
+	initializeMutationRate(1e-7);
+	initializeMutationType("m1", 0.5, "f", 0.0);
+	initializeGenomicElementType("g1", m1, 1);
+	initializeGenomicElement(g1, 0, 99999);
+	initializeRecombinationRate(1e-8);
+}
+
+// each individual reproduces itself once
+reproduction() {
+	if(individual.age > 3) {
+		mate = subpop.sampleIndividuals(1, minAge = 4);
+		subpop.addCrossed(individual, mate);
+	}
+}
+
+// create an initial population of 1000 individuals
+1 early() {
+	
+	defineConstant("simID", getSeed());	
+	
+	defineConstant("LOG_extinct", community.createLogFile("sim_demographic__extinction_log.csv"));
+	LOG_extinct.addCycle();	
+	
+	defineConstant("LOG_popsize",
+community.createLogFile("sim_demographic__popsize_log.txt"));
+	LOG_popsize.addCycle();	
+	LOG_popsize.addCustomColumn("pop size 1","p1.individualCount;");
+	LOG_popsize.addCustomColumn("pop size 2","p2.individualCount;");
+		
+	//LOG_popsize.addCustomColumn("H_obs","calcHeterozygosity(p2.genomes);");		
+	
+	for(i in 1:N)	
+	sim.addSubpop(i, 2000);
+	sim.subpopulations.individuals.age = rdunif(4000, min = 0, max = 12);
+}
+
+
+early() {
+	
+	if(sim.cycle < Tdelta){	
+	
+	// life-table based individual survival with demog stochasticity - p1
+	inds_p1 = p1.individuals;
+	ages_p1 = inds_p1.age;
+	survival_age_p1 = L[ages_p1];
+	weights_n_p1 = length(ages_p1);
+	pop_size_p1 = p1.individualCount;
+	alpha =  0.0000000005*pop_size_p1^3+1;
+	beta  =  0.0000000003*pop_size_p1^3+0.6;
+	weights_p1 = c(rbeta(weights_n_p1,alpha,beta));
+	survival_p1 = 	survival_age_p1 * weights_p1;
+	inds_p1.fitnessScaling = survival_p1;
+	
+	
+	// life-table based individual survival with demog stochasticity - p2
+	
+	inds_p2 = p2.individuals;
+	ages_p2 = inds_p2.age;
+	survival_age_p2 = L[ages_p2];
+	weights_n_p2 = length(ages_p2);
+	pop_size_p2 = p2.individualCount;
+	alpha =  0.0000000005*pop_size_p2^3+1;
+	beta  =  0.0000000003*pop_size_p2^3+0.6;
+	weights_p2 = c(rbeta(weights_n_p2,alpha,beta));
+	survival_p2 = 	survival_age_p2 * weights_p2;
+	inds_p2.fitnessScaling = survival_p2;
+	
+	
+// density-dependence with a maximum benefit at low density	
+		
+	p1.fitnessScaling = min(Kp1 / (p1.individualCount * mean(survival_p1)), 		1.28);
+	p2.fitnessScaling = min(Kp1 / (p2.individualCount * mean(survival_p2)), 		1.28);
+	
+}else{
+	
+	// life-table based individual survival with demog stochasticity - p1
+	inds_p1 = p1.individuals;
+	ages_p1 = inds_p1.age;
+	survival_age_p1 = L[ages_p1];
+	weights_n_p1 = length(ages_p1);
+	pop_size_p1 = p1.individualCount;
+	alpha =  0.0000000005*pop_size_p1^3+1;
+	beta  =  0.0000000003*pop_size_p1^3+0.6;
+	weights_p1 = c(rbeta(weights_n_p1,alpha,beta));
+	survival_p1 = 	survival_age_p1 * weights_p1;
+	inds_p1.fitnessScaling = survival_p1;
+	
+	// life-table based individual survival with demog stochasticity - p2
+	
+	inds_p2 = p2.individuals;
+	ages_p2 = inds_p2.age;
+	survival_age_p2 = L[ages_p2];
+	weights_n_p2 = length(ages_p2);
+	pop_size_p2 = p2.individualCount;
+	alpha =  0.0000000005*pop_size_p2^3+1;
+	beta  =  0.0000000003*pop_size_p2^3+0.6;
+	weights_p2 = c(rbeta(weights_n_p2,alpha,beta));
+	survival_p2 = 	survival_age_p2 * weights_p2;
+	inds_p2.fitnessScaling = survival_p2;
+	
+	// density-dependence with a maximum benefit at low density	
+		
+	p1.fitnessScaling = min(Kp1 / (p1.individualCount * mean(survival_p1)), 1.28);
+	p2.fitnessScaling = min(Kp2 / (p2.individualCount * mean(survival_p2)), 1.28);
+	}
+}
+
+//early() {
+	
+//	catn("sim cycle : " + sim.cycle);
+	//catn("ind fitness scaling p1 " + ": " + paste(mean(p1.individuals.fitnessScaling)));
+//	catn("ind fitness scaling p2 " + ": " + paste(mean(p2.individuals.fitnessScaling)));	
+	//catn("density dependence p1 " + ": " + p1.fitnessScaling);
+	//catn("density dependence p2 " + ": " + p2.fitnessScaling);	
+	// Print mean heterozygosity for each subpopulation
+	//heterozygosity_p1 = calcHeterozygosity(p1.genomes);
+	//cat("Mean Ho p1 = " + heterozygosity_p1 + "\n");	
+	//heterozygosity_p2 = calcHeterozygosity(p2.genomes);
+	//cat("Mean Ho p2 = " + heterozygosity_p2 + "\n");
+//}
+
+10000 late() {
+		// save the state of the simulation
+		sim.outputFull(tempdir() + "slim_" + simID + ".txt");
+}
+
+10001:100000 late() {
+		if (p2.individualCount == 0){
+		
+		// print cycle of extinction
+		catn("Extinction in cycle " + sim.cycle + ".");
+		LOG_extinct.logRow();
+				
+		// go back to tick 20000
+		sim.readFromPopulationFile(tempdir() + "slim_" + simID + ".txt");
+		
+		// start a newly seeded run
+		setSeed(rdunif(1, 0, asInteger(2^62) - 1));
+	}else
+	{
+		
+		//log pop size and heterozygocity
+		LOG_popsize.logRow();
+		
+		// output the phenotypic mean and pop size
+//		catn(sim.cycle + "p1: " + p1.individualCount + " individuals");
+//		catn(sim.cycle + "p2: " + p2.individualCount + " individuals");
+		//catn("mean age " + "p1: " + mean(p1.individuals.age));
+		//catn("mean age " + "p2: " + mean(p2.individuals.age));		
+	}
+}
