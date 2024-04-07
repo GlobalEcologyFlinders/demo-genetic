@@ -2,6 +2,8 @@
 <img align="right" src="www/GRiconTransp.png" alt="genetic rescue icon" width="180" style="margin-top: 20px">
 Code for <a href="http://www.messerlab.org/slim"><em>SLiM</em></a> 4.0 demo-genetic models examining the population effects of genetic rescue <br>
 <br>
+SLiM ('Selection on Linked Mutations') is an individual-based, forward-in-time simulator designed for studies of evolutionary genetics. <br>
+<br>
 <a href=mailto:julian.beaman@flinders.edu.au>Julian Beaman</a> & <a href=mailto:corey.bradshaw@flinders.edu.au>Corey Bradshaw</a> <br>
 Global Ecology | <a></a>Partuyarta Ngadluku Wardli Kuu</a> <br>
 Flinders University <br>
