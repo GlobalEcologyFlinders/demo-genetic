@@ -1,4 +1,4 @@
-### Figure 4, panel a
+### Figure 3, panel a
 
 pop_size <- seq(0,3000,length.out = 100)
 
@@ -37,18 +37,18 @@ for(i in 2:nrow(survival_prob)){
     lines(x,dbeta(x,survival_prob$alpha[i],survival_prob$beta[i]))
 }
 
-Fig4a.dat <- data.frame(x, dbeta(x,survival_prob$alpha[1],survival_prob$beta[1]),
+Fig3a.dat <- data.frame(x, dbeta(x,survival_prob$alpha[1],survival_prob$beta[1]),
                         dbeta(x,survival_prob$alpha[2],survival_prob$beta[2]),
                         dbeta(x,survival_prob$alpha[3],survival_prob$beta[3]),
                         dbeta(x,survival_prob$alpha[4],survival_prob$beta[4]))
-colnames(Fig4a.dat) <- c("S", "dens1", "dens2", "dens3", "dens4")
-head(Fig4a.dat)
+colnames(Fig3a.dat) <- c("S", "dens1", "dens2", "dens3", "dens4")
+head(Fig3a.dat)
 
-write.table(Fig4a.dat, "Fig4aOut.csv", sep=",", row.names=F)
+write.table(Fig3a.dat, "Fig3aOut.csv", sep=",", row.names=F)
 
 
 
-# Figure 4 - panel b to c
+# Figure 3 - panel b to c
 pop_size <- seq(0,3000,length.out = 100)
 
 alpha <- (0.0000000005*pop_size^3+1)
@@ -78,10 +78,10 @@ plot(survival_prob$variance ~ survival_prob$mean,
      cex.lab = 1.3)
 mtext(expression(sigma^2*" survival prob."), side = 2, line = 3, cex = 1.3)
 
-Fig4b.dat <- data.frame(survival_prob$mean, survival_prob$variance)
-colnames(Fig4b.dat) <- c("Xs", "Vs")
-head(Fig4b.dat)
-write.table(Fig4b.dat, "Fig4bOut.csv", sep=",", row.names=F)
+Fig3b.dat <- data.frame(survival_prob$mean, survival_prob$variance)
+colnames(Fig3b.dat) <- c("Xs", "Vs")
+head(Fig3b.dat)
+write.table(Fig3b.dat, "Fig3bOut.csv", sep=",", row.names=F)
 
 
 plot(survival_prob$variance ~ survival_prob$pop_size,
@@ -91,10 +91,10 @@ plot(survival_prob$variance ~ survival_prob$pop_size,
      cex.lab = 1.3)
 mtext(expression(sigma^2*" survival prob."), side = 2, line = 3, cex = 1.3)
 
-Fig4c.dat <- data.frame(survival_prob$pop_size, survival_prob$variance)
-colnames(Fig4c.dat) <- c("N", "Vs")
-head(Fig4c.dat)
-write.table(Fig4c.dat, "Fig4cOut.csv", sep=",", row.names=F)
+Fig3c.dat <- data.frame(survival_prob$pop_size, survival_prob$variance)
+colnames(Fig3c.dat) <- c("N", "Vs")
+head(Fig3c.dat)
+write.table(Fig3c.dat, "Fig3cOut.csv", sep=",", row.names=F)
 
 
 plot(survival_prob$mean ~ survival_prob$pop_size,
@@ -104,8 +104,8 @@ plot(survival_prob$mean ~ survival_prob$pop_size,
      cex.lab = 1.3)
 mtext(expression(mu *" survival prob."), side = 2, line = 3, cex = 1.3)
 
-Fig4d.dat <- data.frame(survival_prob$pop_size, survival_prob$mean)
-colnames(Fig4d.dat) <- c("N", "Xs")
-head(Fig4d.dat)
-write.table(Fig4d.dat, "Fig4dOut.csv", sep=",", row.names=F)
+Fig3d.dat <- data.frame(survival_prob$pop_size, survival_prob$mean)
+colnames(Fig3d.dat) <- c("N", "Xs")
+head(Fig3d.dat)
+write.table(Fig3d.dat, "Fig3dOut.csv", sep=",", row.names=F)
 
