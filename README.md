@@ -2,7 +2,7 @@
 <img align="right" src="www/GRiconTransp.png" alt="genetic rescue icon" width="180" style="margin-top: 20px">
 Code for <a href="http://www.messerlab.org/slim"><em>SLiM</em></a> 4.0 demo-genetic models examining the population effects of genetic rescue <br>
 <br>
-<em>SLiM</em> ('<strong>S</strong>election on <strong>Li</strong>nked <strong>M</strong>utations') is an individual-based, forward-in-time simulator designed for studies of evolutionary genetics. <br>
+<em>SLiM</em> ('<strong>S</strong>election on <strong>Li</strong>nked <strong>M</strong>utations') is an <a href="http://doi.org/10.1086/723601">individual-based, forward-in-time simulator</a> designed for studies of evolutionary genetics. <br>
 <br>
 <a href=mailto:julian.beaman@flinders.edu.au>Julian Beaman</a> & <a href=mailto:corey.bradshaw@flinders.edu.au>Corey Bradshaw</a> <br>
 Global Ecology | <a></a>Partuyarta Ngadluku Wardli Kuu</a> <br>
