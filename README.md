@@ -23,4 +23,6 @@ Genetic rescue is now a serious management consideration for protecting small an
 - <code>rescue-scenario-4_model.txt</code>: <em>SLiM</em> 4.0 code to generate genetic rescue (scenario 4: 100 individuals moved 3 times at 250, 255, and 260 years after demographic decline) scenario.
 - <code>R code Figure 3.R</code>: R code to generate data for Figure 3.
 
+<br>
+<br>
 <p><a href="https://www.flinders.edu.au"><img align="bottom-left" src="www/Flinders_University_Logo_Horizontal_RGB_Master.png" alt="Flinders University" width="150" style="margin-top: 20px"></a> &nbsp; &nbsp; <a href="https://globalecologyflinders.com"><img align="bottom-left" src="www/GEL Logo Kaurna New Transp.png" alt="GEL" width="85" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://molecularecology.flinders.edu.au/"><img align="bottom-left" src="www/MELlogo.png" alt="MELFU logo" width="110" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; <a href="https://wildlife-genomics.sydney.edu.au/"><img align="bottom-left" src="www/USydlogo.png" alt="USyd logo" width="70" style="margin-top: 20px"></a> &nbsp; &nbsp; &nbsp; &nbsp; <a href="https://wwf.org.au/"><img align="bottom-left" src="www/WWFlogo.webp" alt="WWF logo" width="50" style="margin-top: 20px"></a>
