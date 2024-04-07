@@ -1,14 +1,15 @@
 # Demo-genetic models to simulate genetic rescue
 <img align="right" src="www/GRiconTransp.png" alt="genetic rescue icon" width="180" style="margin-top: 20px">
-Code for <em>SLiM</em> 4.0 demo-genetic models examining the population effects of genetic rescue <br>
+Code for <a href="http://www.messerlab.org/slim"><em>SLiM</em></a> 4.0 demo-genetic models examining the population effects of genetic rescue <br>
 <br>
 <a href=mailto:julian.beaman@flinders.edu.au>Julian Beaman</a> & <a href=mailto:corey.bradshaw@flinders.edu.au>Corey Bradshaw</a> <br>
+Global Ecology | <a></a>Partuyarta Ngadluku Wardli Kuu</a> <br>
 Flinders University <br>
-07.04.2024 <br>
+April 2024 <br>
 <br>
 Accompanies paper:<br>
 <br>
-Beaman, JE, K Gates, F Saltré, CJ Hogg, K Belov, K Ashman, K Burke da Silva, LB Beheregaray, CJA Bradshaw. A guide for developing demo-genetic models to simulate genetic rescue. <em>Evolutionary Applications</em> In review
+<a href="https://www.flinders.edu.au/people/julian.beaman">Beaman, JE</a>, <a href="https://molecularecology.flinders.edu.au/molecular-ecology-lab/people/postdoctoral-fellows/dr-katie-gates-2/">K Gates</a>, <a href="https://www.flinders.edu.au/people/frederik.saltre">F Saltré</a>, <a href="https://www.sydney.edu.au/science/about/our-people/academic-staff/carolyn-hogg.html">CJ Hogg</a>, <a href="https://www.sydney.edu.au/science/about/our-people/academic-staff/kathy-belov.html">K Belov</a>, <a href="https://scholar.google.com/citations?user=2xF8xocAAAAJ&hl=en">K Ashman</a>, <a href="https://www.flinders.edu.au/people/karen.burkedasilva">K Burke da Silva</a>, <a href="https://www.flinders.edu.au/people/luciano.beheregaray">LB Beheregaray</a>, <a href="https://www.flinders.edu.au/people/corey.bradshaw">CJA Bradshaw</a>. A guide for developing demo-genetic models to simulate genetic rescue. <em>Evolutionary Applications</em> In review
 
 ## Scripts
 
