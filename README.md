@@ -19,7 +19,7 @@ Genetic rescue is now a serious management consideration for protecting small an
 
 <img align="right" src="www/GRdecisionTree.jpg" alt="genetic rescue decision tree" style="margin-top: 20px">
 
-##### <strong>A Decision tree for model-based guidance of genetic rescue.</strong>
+##### <strong>A decision tree for model-based guidance of genetic rescue.</strong>
 <br>
 
 ## <a href="https://github.com/cjabradshaw/demo-genetic/tree/main/scripts">Scripts</a>
