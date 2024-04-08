@@ -1,4 +1,5 @@
 # Demo-genetic models to simulate genetic rescue
+<a href="https://zenodo.org/doi/10.5281/zenodo.10939288"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.10939289.svg" alt="DOI"></a>
 <img align="right" src="www/GRiconTransp.png" alt="genetic rescue icon" width="180" style="margin-top: 20px">
 Code for <a href="http://www.messerlab.org/slim"><em>SLiM</em></a> 4.0 demo-genetic models examining the population effects of genetic rescue <br>
 <br>
