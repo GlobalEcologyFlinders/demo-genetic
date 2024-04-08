@@ -20,8 +20,6 @@ Genetic rescue is now a serious management consideration for protecting small an
 
 ##### <strong>A Decision tree for model-based guidance of genetic rescue.</strong>
 
-<br>
-
 ## Scripts
 - <code>demographicAlleemodel.txt</code>: <em>SLiM</em> 4.0 code to generate a model of demographic Allee effects that included only the influence of demographic stochasticity on population growth.
 - <code>genetic-Allee_model.txt</code>: <em>SLiM</em> 4.0 code to generate a model of genetic Allee effects that only included partially recessive deleterious mutations that accumulate in the population prior to an abrupt crash in abundance
