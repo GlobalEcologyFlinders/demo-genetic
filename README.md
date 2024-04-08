@@ -17,7 +17,7 @@ Accompanies paper:<br>
 Genetic rescue is now a serious management consideration for protecting small and isolated populations from the negative effects of inbreeding and genetic drift on genetic diversity and population viability. However, such populations might be already vulnerable to random fluctuations in growth rates (demographic stochasticity). Therefore, the success of genetic rescue depends not only on the genetic composition of the source and target populations, but also on the emergent outcome of interacting demographic processes and other stochastic events. Developing predictive models that account for feedback between demographic and genetic processes ('demo-genetic feedback') is therefore necessary to guide genetic-rescue interventions that potentially minimise the risk of extinction of threatened populations. We review the available software and explore how they could be used to develop practical simulations that incorporate demo-genetic feedback to plan and implement scenarios of genetic rescue. We then present a summary of a literature search of available genetic data using Australian threatened marsupials as a case study. We conclude with a guided approach for making model-based decisions on implementing genetic rescue.
 
 <img align="right" src="www/GRdecisionTree.jpg" alt="genetic rescue decision tree" style="margin-top: 20px">
-<strong>A Decision tree for model-based guidance of genetic rescue.</strong>
+##### <strong>A Decision tree for model-based guidance of genetic rescue.</strong>
 <br>
 <br>
 
