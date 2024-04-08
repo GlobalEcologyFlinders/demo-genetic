@@ -19,6 +19,7 @@ Genetic rescue is now a serious management consideration for protecting small an
 <img align="right" src="www/GRdecisionTree.jpg" alt="genetic rescue decision tree" style="margin-top: 20px">
 
 ##### <strong>A Decision tree for model-based guidance of genetic rescue.</strong>
+<br>
 
 ## Scripts
 - <code>demographicAlleemodel.txt</code>: <em>SLiM</em> 4.0 code to generate a model of demographic Allee effects that included only the influence of demographic stochasticity on population growth.
